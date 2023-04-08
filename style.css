@@ -24,7 +24,6 @@ body {
 
 header, aside, main, footer {
     border: solid var(--cor-borda) 2px;
-    padding-top: 20px;
     border-radius: 10px;    
 }
 
@@ -33,11 +32,13 @@ header, footer {
 }
 
 header {
-    text-align: center;
     font-size: 25px;
     font-weight: bold;
     color: var(--cor-letra-desktop);
-    background-color: var(--cor-fundo-header);    
+    background-color: var(--cor-fundo-header);
+    display: flex;
+    justify-content:center;
+    align-items: center;
 }
 
 aside {
@@ -50,4 +51,16 @@ main {
 
 footer {
     background-color: var(--cor-fundo-footer);    
+}
+
+@media screen and (max-width: 640px) {
+    header {
+        color: var(--cor-letra-mobile);  
+    }
+    aside {
+        display: none;
+    }
+    main {
+        grid-column: 1/3;
+    }
 }
