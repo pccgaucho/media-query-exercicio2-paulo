@@ -53,7 +53,25 @@ footer {
     background-color: var(--cor-fundo-footer);    
 }
 
+@media screen and (max-width: 1007px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 4fr 1fr;
+    }
+    main {
+        display: block;
+    }
+    header, aside, main, footer {
+        color: var(--cor-letra-tablet);
+        grid-column: 1/3;
+    }
+}
+
 @media screen and (max-width: 640px) {
+    body {
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 1fr 6fr 1fr;
+    }
     header {
         color: var(--cor-letra-mobile);  
     }
